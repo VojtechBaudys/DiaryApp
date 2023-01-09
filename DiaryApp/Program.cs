@@ -1,3 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿namespace DiaryApp;
 
-Console.WriteLine("Hello, World!");
+public class Program
+{
+	static void Main()
+	{
+		Diary diary = new Diary();
+		diary.Loop();
+	}
+}
+
