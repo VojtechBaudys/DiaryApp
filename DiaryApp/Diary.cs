@@ -13,22 +13,52 @@ public class Diary
 	}
 	public void Loop()
 	{
+		ShowWeek();
+
 		while (Run)
 		{
-			MenuController.MainMenu();
-			switch (GetInput())
-			{
-				case "p": case "play":
-					
-					break;
-				case "l": case "leader":
-					
-					break;
-				case "e": case "exit":
-					Run = false;
-					break;
-			}
+			// MenuController.MainMenu();
+			// switch (GetInput())
+			// {
+			// 	case "a": case "add":
+			// 		// AddRecord();
+			// 		break;
+			// 	case "e": case "edit":
+			// 		// EditRecord();
+			// 		break;
+			// 	case "d": case "delete":
+			// 		// DeleteRecord();
+			// 		break;
+			// 	case "l": case "leave":
+			// 		Run = false;
+			// 		break;
+			// }
 		}
+	}
+
+	private void ShowWeek()
+	{
+		List<DateTime> days = new List<DateTime>();
+
+		// while (true)
+		// {
+		// 	if (DateTime.Today)
+		// 	{
+		// 		
+		// 	}
+		// }
+		DateTime startDay = DateTime.Today.AddDays(1);
+		 
+		
+		
+		
+		for (int x = 1; x < 7; x++)
+		{
+			days.Add(DateTime.Today.AddDays(x));
+			// Console.WriteLine(days[x]);
+		}
+		
+		// Console.Write(startOfWeek);
 	}
 	
 	private string GetInput(int maxLetters = 0, string type = "letter")
