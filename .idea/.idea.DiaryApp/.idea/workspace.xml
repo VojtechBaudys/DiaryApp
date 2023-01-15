@@ -8,9 +8,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a61f169f-f525-4979-b687-94fe8b53e7c5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DiaryApp/tasks.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DiaryApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiaryApp/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiaryApp/Diary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/Diary.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiaryApp/records.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/records.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiaryApp/DiaryApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/DiaryApp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiaryApp/MenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/MenuController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiaryApp/obj/DiaryApp.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/obj/DiaryApp.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiaryApp/obj/DiaryApp.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/obj/DiaryApp.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiaryApp/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiaryApp/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiaryApp/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiaryApp/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiaryApp/records.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +28,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/198a6261cebc324728dcc4c178edc5f2894123f711722c80e8557cbfd27651/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/29ea32a76b2a6b8eb246f247df6a6a86d887384b4c31db2a35effccdd86c24/JsonSerializerInternalReader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/443ce614ff11fd4152a3c735dec9ef388c537ef8ea9c24e0f018f1bd619e85/JObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4dce5b82d2329e8a3aca1211284ab7ea21cf79ceea9c0da7e3810c8bb1e1bfb/JValue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/933f374d88a082deeb91a8715cb947ccef921a3d1aa957af5ca5624f813a2b8/DateTime.Windows.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a9cbda3784706aeeed61f1a08a18046925b69f777943eca27fbbcca09dff60/DateTime.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/efd3e9c4749621d4a53b45d7117d2a581e02a265c444a040f1387a155db/Dictionary.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f3b9684f72bc2cc435eb694f7cc86eca8c240d2d1cefa1e8697a61f1f2f27f/SafeFileHandle.Windows.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -31,18 +47,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "XThreadsFramesViewSplitterKey": "0.49467456",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="DiaryApp" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -74,6 +91,8 @@
       <workItem from="1673273616220" duration="3081000" />
       <workItem from="1673444111103" duration="834000" />
       <workItem from="1673446751690" duration="2480000" />
+      <workItem from="1673798336002" duration="6738000" />
+      <workItem from="1673805100615" duration="12793000" />
     </task>
     <task id="LOCAL-00001" summary="asdf">
       <created>1673276691286</created>
@@ -111,18 +130,23 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/DiaryApp/Diary.cs</url>
-          <line>49</line>
-          <properties documentPath="C:\Users\baudyvo20\DiaryApp\DiaryApp\DiaryApp\Diary.cs" initialLine="49" containingFunctionPresentation="method 'ShowWeek'">
+          <line>143</line>
+          <properties documentPath="C:\Users\vojta\RiderProjects\DiaryApp\DiaryApp\Diary.cs" initialLine="143" containingFunctionPresentation="method 'SaveTasks'">
             <startOffsets>
-              <option value="794" />
+              <option value="2906" />
             </startOffsets>
             <endOffsets>
-              <option value="840" />
+              <option value="2945" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="DotNetProject">
+        <watch expression="events.Last" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
