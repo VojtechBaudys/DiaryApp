@@ -16,35 +16,6 @@ public class Task
 		Description = "";
 	}
 	
-	// SAVE TO TASKS JSON FILE
-	// date [string] - task date
-	// title [string] - task title
-	// description [description] - task description
-	public void SaveTasks()
-	{
-		JsonFileExist("tasks.json");
-
-		dynamic? tasks = ReadTasks();
-
-		JObject task = new JObject();
-		
-		task.Add("Title", Title);
-		task.Add("Description", Description);
-		
-		if (tasks?.ContainsKey(Date))
-		{
-			tasks?[Date].Add(task);
-		}
-		else
-		{
-			JArray taskArray = new JArray() {task};
-			tasks?.Add(Date, taskArray);
-		}
-		
-		tasks = JsonConvert.SerializeObject(tasks);
-		File.WriteAllText("tasks.json", tasks);
-	}
-	
 	// CHECK FILE IF EXISTS
 	// FALSE -> CREATE NEW ONE
 	// path [string] - file path
@@ -62,13 +33,58 @@ public class Task
 	}
 	
 	// READ ALL TASKS
-	public static JObject? ReadTasks()
+	public static JArray? ReadTasks()
 	{
 		JsonFileExist("tasks.json");
 		
 		string jsonString = File.ReadAllText("tasks.json");
-		dynamic? jsonFile = JsonConvert.DeserializeObject<JObject>(jsonString);
+		dynamic? jsonFile = JsonConvert.DeserializeObject(jsonString);
 
 		return jsonFile;
+	}
+	
+	// SAVE TO TASKS JSON FILE
+	public void SaveTasks()
+	{
+		JsonFileExist("tasks.json");
+
+		dynamic? tasks = ReadTasks();
+
+		JObject task = new JObject();
+		
+		task.Add("Date", Date);
+		task.Add("Title", Title);
+		task.Add("Description", Description);
+		
+		tasks?.Add(task);
+		
+		tasks = JsonConvert.SerializeObject(tasks);
+		File.WriteAllText("tasks.json", tasks);
+	}
+
+	// REMOVE TASK FROM TASKS
+	// index [int] - index of task
+	public static void RemoveFromTasks(int index)
+	{
+		JArray? tasks = ReadTasks();
+		
+		tasks?.RemoveAt(index);
+		
+		string tasksString = JsonConvert.SerializeObject(tasks);
+		File.WriteAllText("tasks.json", tasksString);
+	}
+
+	// EDIT TASK FROM TASKS
+	// index [int] - index of task
+	public void EditTask(int index)
+	{
+		JArray tasks = ReadTasks()!;
+		
+		tasks[index]["Date"] = Date;
+		tasks[index]["Title"] = Title;
+		tasks[index]["Description"] = Description;
+		
+		string tasksString = JsonConvert.SerializeObject(tasks);
+		File.WriteAllText("tasks.json", tasksString);
 	}
 }

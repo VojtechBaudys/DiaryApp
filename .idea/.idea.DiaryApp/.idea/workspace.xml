@@ -8,10 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a61f169f-f525-4979-b687-94fe8b53e7c5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DiaryApp/Task.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DiaryApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiaryApp/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiaryApp/Diary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/Diary.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiaryApp/MenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/MenuController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiaryApp/Task.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/Task.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiaryApp/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiaryApp/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/tasks.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +27,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4dce5b82d2329e8a3aca1211284ab7ea21cf79ceea9c0da7e3810c8bb1e1bfb/JValue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/933f374d88a082deeb91a8715cb947ccef921a3d1aa957af5ca5624f813a2b8/DateTime.Windows.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a9cbda3784706aeeed61f1a08a18046925b69f777943eca27fbbcca09dff60/DateTime.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b583e7d8f82a4d824fae2e16e2af7f00dc92a5cddd53375c554aee1980d145/JContainer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/efd3e9c4749621d4a53b45d7117d2a581e02a265c444a040f1387a155db/Dictionary.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f3b9684f72bc2cc435eb694f7cc86eca8c240d2d1cefa1e8697a61f1f2f27f/SafeFileHandle.Windows.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -85,7 +88,7 @@
       <workItem from="1673444111103" duration="834000" />
       <workItem from="1673446751690" duration="2480000" />
       <workItem from="1673798336002" duration="6738000" />
-      <workItem from="1673805100615" duration="17095000" />
+      <workItem from="1673805100615" duration="24863000" />
     </task>
     <task id="LOCAL-00001" summary="asdf">
       <created>1673276691286</created>
@@ -101,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673821643665</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feature/Taskos">
+      <created>1673991434446</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673991434446</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,26 +134,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="asdf" />
     <MESSAGE value="feature/lambáda add, show" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature/lambáda add, show" />
+    <MESSAGE value="feature/Taskos" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature/Taskos" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/DiaryApp/Diary.cs</url>
-          <line>77</line>
-          <properties documentPath="C:\Users\vojta\RiderProjects\DiaryApp\DiaryApp\Diary.cs" initialLine="73" containingFunctionPresentation="method 'ShowAllTasks'">
-            <startOffsets>
-              <option value="1469" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1503" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="DotNetProject">
         <watch expression="events.Last" />

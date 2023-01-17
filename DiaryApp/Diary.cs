@@ -1,5 +1,4 @@
 ﻿using System.Text.RegularExpressions;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace DiaryApp;
@@ -24,7 +23,7 @@ public class Diary
 			Console.WriteLine("-----------DIAREK----------\n");
 			ShowWeek();
 			MenuController.MainMenu();
-			switch (GetInput())
+			switch (GetInput(0, "text"))
 			{
 				case "n": case "next":
 					DaysDiff += 7;
@@ -32,11 +31,17 @@ public class Diary
 				case "p": case "prev":
 					DaysDiff -= 7;
 					break;
+				case "s": case "show all tasks":
+					ShowAllTasks();
+					MenuController.ShowAllTasks();
+					Console.ReadLine();
+					Console.Clear();
+					break;
 				case "a": case "add":
 					AddTask();
 					break;
 				case "e": case "edit":
-					// EditTask();
+					EditTask();
 					break;
 				case "d": case "delete":
 					DeleteTask();
@@ -63,40 +68,79 @@ public class Diary
 		task.SaveTasks();
 	}
 
+	// PRINT EDIT WINDOW
+	private void EditTask()
+	{
+		if (ShowAllTasks())
+		{
+			Task task = new Task();
+			JArray tasks = Task.ReadTasks()!;
+			int index = -1;
+			
+			do
+			{
+				
+				Console.Clear();
+				ShowAllTasks();
+				MenuController.SelectEdit();
+				if (index != -1)
+				{
+					Console.Write("\nUndefined INDEX\n");
+				}
+				index = Int32.Parse(GetInput(0, "number"));
+			} while (index >= tasks.Count());
+			
+			MenuController.SelectDate(tasks[index]["Date"]!.ToString());
+			task.Date = GetInput(0, "date");
+			MenuController.SelectTitle(tasks[index]["Title"]!.ToString());
+			task.Title = GetInput(50, "text");
+			MenuController.SelectDescription(tasks[index]["Description"]!.ToString());
+			task.Description = GetInput(300, "text");
+			
+			task.EditTask(index);
+		}		
+	}
+
+	// PRINT DELETE WINDOW
 	private void DeleteTask()
 	{
-		ShowAllTasks();
-		
-		MenuController.SelectDelete();
-		string number = GetInput(0, "number");
+		if (ShowAllTasks())
+		{
+			MenuController.SelectDelete();
+			Task.RemoveFromTasks(Int32.Parse(GetInput(0, "number")));	
+		}
 	}
 	
 	// PRINT ALL TASKS IN JSONEK
-	private void ShowAllTasks()
+	private bool ShowAllTasks()
 	{
 		int number = 0;
-		JObject? tasks = Task.ReadTasks();
+		JArray? tasks = Task.ReadTasks();
 
-		if (tasks != null)
-			foreach (var day in tasks)
+		if (tasks!.Count > 0)
+			foreach (JToken task in tasks)
 			{
-				Console.Write(day.Key);
-
-				foreach (JToken task in day.Value!)
-				{
-					Console.Write(
-						"   - " + task["Title"] + " (" + task["Description"] + ") [" + number + "]\n"
-					);
-					number++;
-				}
+				Console.Write(
+					task["Date"] + "  -  " + task["Title"] + " (" + task["Description"] + ") [" + number + "]\n"
+				);
+				number++;
 			}
+		else
+		{
+			Console.Write("YOU DONT HAVE ANY TASK");
+			Thread.Sleep(2000);
+			Console.Clear();
+			return false;
+		}
+
+		return true;
 	}
 	
 	// PRINT ALL WEEK DAYS WITH TASKS
 	private void ShowWeek()
 	{
 		DateTime startDay;
-		JObject? tasks = Task.ReadTasks();
+		JArray? tasks = Task.ReadTasks();
 
 		if (DaysDiff == 0)
 		{
@@ -117,25 +161,26 @@ public class Diary
 
 		for (int x = 0; x < 7; x++)
 		{
-			Console.Write(startDay.AddDays(x).ToString(Format) + " [" +  startDay.AddDays(x).DayOfWeek + "]");
+			string dateString = startDay.AddDays(x).ToString(Format);
+			Console.Write(dateString + " [" +  startDay.AddDays(x).DayOfWeek + "]");
 			if (startDay.AddDays(x) == DateTime.Today)
 			{
 				Console.Write(" -> TODAY");
 			}
 			Console.Write("\n");
 
-			if (tasks?[startDay.AddDays(x).ToString(Format)] != null)
-				foreach (JToken task in tasks[startDay.AddDays(x).ToString(Format)]!)
-				{
-					Console.Write(
-						"   - " + task["Title"] + " (" + task["Description"] + ")\n"
-					);
-				}
+			var sorted = tasks!.Where(task => task["date"]?.ToString() == "1/16/2023");
+
+			// if (tasks?[startDay.AddDays(x).ToString(Format)] != null)
+			// 	foreach (JToken task in tasks[startDay.AddDays(x).ToString(Format)]!)
+			// 	{
+			// 		Console.Write(
+			// 			"   - " + task["Title"] + " (" + task["Description"] + ")\n"
+			// 		);
+			// 	}
 		}
 	}
 	
-	
-
 	// USER INPUT FUNCTION
 	// maxLetters [int] - max allowed chars
 	// type [string]	- letter (only letters without spaces)
