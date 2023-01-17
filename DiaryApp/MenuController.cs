@@ -38,4 +38,12 @@ public class MenuController
 			"---------------------------\n"
 		);
 	}
+	public void SelectDelete()
+	{
+		Console.Write(
+			"\n---SELECT TASK TO DELETE---\n" +
+			"SELECT ONLY TASK NUMBER\n" +
+			"---------------------------\n"
+		);
+	}
 }

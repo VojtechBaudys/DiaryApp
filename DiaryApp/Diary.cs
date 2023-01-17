@@ -39,7 +39,7 @@ public class Diary
 					// EditTask();
 					break;
 				case "d": case "delete":
-					// DeleteTask();
+					DeleteTask();
 					break;
 				case "l": case "leave":
 					Run = false;
@@ -51,25 +51,52 @@ public class Diary
 	// ADD TASK TO JSON FILE
 	private void AddTask()
 	{
-		string date;
-		string title;
-		string description;
+		Task task = new Task();
 
 		MenuController.SelectDate();
-		date = GetInput(0, "date");
+		task.Date = GetInput(0, "date");
 		MenuController.SelectTitle();
-		title = GetInput(50, "text");
+		task.Title = GetInput(50, "text");
 		MenuController.SelectDescription();
-		description = GetInput(300, "text");
+		task.Description = GetInput(300, "text");
 		
-		SaveTasks(date, title, description);
+		task.SaveTasks();
+	}
+
+	private void DeleteTask()
+	{
+		ShowAllTasks();
+		
+		MenuController.SelectDelete();
+		string number = GetInput(0, "number");
+	}
+	
+	// PRINT ALL TASKS IN JSONEK
+	private void ShowAllTasks()
+	{
+		int number = 0;
+		JObject? tasks = Task.ReadTasks();
+
+		if (tasks != null)
+			foreach (var day in tasks)
+			{
+				Console.Write(day.Key);
+
+				foreach (JToken task in day.Value!)
+				{
+					Console.Write(
+						"   - " + task["Title"] + " (" + task["Description"] + ") [" + number + "]\n"
+					);
+					number++;
+				}
+			}
 	}
 	
 	// PRINT ALL WEEK DAYS WITH TASKS
 	private void ShowWeek()
 	{
 		DateTime startDay;
-		JObject? tasks = ReadTasks();
+		JObject? tasks = Task.ReadTasks();
 
 		if (DaysDiff == 0)
 		{
@@ -98,73 +125,17 @@ public class Diary
 			Console.Write("\n");
 
 			if (tasks?[startDay.AddDays(x).ToString(Format)] != null)
-			{
 				foreach (JToken task in tasks[startDay.AddDays(x).ToString(Format)]!)
 				{
 					Console.Write(
 						"   - " + task["Title"] + " (" + task["Description"] + ")\n"
 					);
 				}
-			}
 		}
 	}
 	
-	// READ ALL TASKS
-	private JObject? ReadTasks()
-	{
-		JsonFileExist("tasks.json");
-		
-		string jsonString = File.ReadAllText("tasks.json");
-		dynamic? jsonFile = JsonConvert.DeserializeObject<JObject>(jsonString);
-
-		return jsonFile;
-	}
-
-	// SAVE TO TASKS JSON FILE
-	// date [string] - task date
-	// title [string] - task title
-	// description [description] - task description
-	private void SaveTasks(string date, string title, string description)
-	{
-		JsonFileExist("tasks.json");
-
-		dynamic? tasks = ReadTasks();
-
-		JObject task = new JObject();
-		
-		task.Add("Title", title);
-		task.Add("Description", description);
-		
-		if (tasks?.ContainsKey(date))
-		{
-			tasks?[date].Add(task);
-		}
-		else
-		{
-			JArray taskArray = new JArray() {task};
-			tasks?.Add(date, taskArray);
-		}
-		
-		tasks = JsonConvert.SerializeObject(tasks);
-		File.WriteAllText("tasks.json", tasks);
-	}
 	
-	// CHECK FILE IF EXISTS
-	// FALSE -> CREATE NEW ONE
-	// path [string] - file path
-	public void JsonFileExist(string path)
-	{
-		try
-		{
-			JsonConvert.DeserializeObject(File.ReadAllText(path));
-		}
-		catch
-		{
-			File.Create(path).Close();
-			File.WriteAllText(path, "{}");
-		}
-	}
-	
+
 	// USER INPUT FUNCTION
 	// maxLetters [int] - max allowed chars
 	// type [string]	- letter (only letters without spaces)
