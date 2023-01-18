@@ -169,7 +169,7 @@ public class Diary
 			}
 			Console.Write("\n");
 
-			var sorted = tasks!.Where(task => task["date"]?.ToString() == "1/16/2023");
+			var thisDay = tasks.Where(task => (string)task["Date"] == "1/2/2023");
 
 			// if (tasks?[startDay.AddDays(x).ToString(Format)] != null)
 			// 	foreach (JToken task in tasks[startDay.AddDays(x).ToString(Format)]!)
