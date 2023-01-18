@@ -1,25 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vojta\\RiderProjects\\DiaryApp\\DiaryApp\\DiaryApp.csproj": {}
+    "C:\\Users\\baudyvo20\\DiaryApp\\DiaryApp\\DiaryApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vojta\\RiderProjects\\DiaryApp\\DiaryApp\\DiaryApp.csproj": {
+    "C:\\Users\\baudyvo20\\DiaryApp\\DiaryApp\\DiaryApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vojta\\RiderProjects\\DiaryApp\\DiaryApp\\DiaryApp.csproj",
+        "projectUniqueName": "C:\\Users\\baudyvo20\\DiaryApp\\DiaryApp\\DiaryApp.csproj",
         "projectName": "DiaryApp",
-        "projectPath": "C:\\Users\\vojta\\RiderProjects\\DiaryApp\\DiaryApp\\DiaryApp.csproj",
-        "packagesPath": "C:\\Users\\vojta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vojta\\RiderProjects\\DiaryApp\\DiaryApp\\obj\\",
+        "projectPath": "C:\\Users\\baudyvo20\\DiaryApp\\DiaryApp\\DiaryApp.csproj",
+        "packagesPath": "C:\\Users\\baudyvo20\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\baudyvo20\\DiaryApp\\DiaryApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+        ],
         "configFilePaths": [
-          "C:\\Users\\vojta\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\baudyvo20\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WinForms.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WPF.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

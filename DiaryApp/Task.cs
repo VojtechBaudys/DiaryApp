@@ -8,7 +8,7 @@ public class Task
 	public string Date;
 	public string Title;
 	public string Description;
-	
+
 	internal Task()
 	{
 		Date = "";

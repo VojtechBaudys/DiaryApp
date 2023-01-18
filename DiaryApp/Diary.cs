@@ -8,7 +8,7 @@ public class Diary
 	public bool Run;
 	public int DaysDiff; // days difference between today and some date
 	public MenuController MenuController;
-	private const string Format = "MM/dd/yyyy";
+	private const string Format = "yyyy-MM-dd";
 	internal Diary()
 	{
 		Run = true;
@@ -169,15 +169,14 @@ public class Diary
 			}
 			Console.Write("\n");
 
-			var thisDay = tasks.Where(task => (string)task["Date"] == "1/2/2023");
-
-			// if (tasks?[startDay.AddDays(x).ToString(Format)] != null)
-			// 	foreach (JToken task in tasks[startDay.AddDays(x).ToString(Format)]!)
-			// 	{
-			// 		Console.Write(
-			// 			"   - " + task["Title"] + " (" + task["Description"] + ")\n"
-			// 		);
-			// 	}
+			IEnumerable<JToken> thisDayTasks = tasks?.Where(task => task["Date"]!.ToString() == dateString);
+			
+			foreach (JToken task in thisDayTasks)
+			{
+				Console.Write(
+					"   - " + task["Title"] + " (" + task["Description"] + ")\n"
+				);
+			}
 		}
 	}
 	

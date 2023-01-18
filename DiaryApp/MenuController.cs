@@ -19,7 +19,7 @@ public class MenuController
 	{
 		Console.Write(
 			"--------SELECT DATE--------\n" +
-			"FORMAT: month/day/year (12/1/2000)\n"
+			"FORMAT: year-month-day (2000-12-1)\n"
 		);
 		if (date != "")
 		{

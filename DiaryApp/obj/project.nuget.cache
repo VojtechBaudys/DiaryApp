@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "b3xNlowP+44HgotvLXTksJKKhTBD4Eu1uEIe9NhOUFEou9PjxxYZnTpaa4sHXC3hGU+IXAhdhzpZ7DmHJJDZ+w==",
+  "dgSpecHash": "PERM0fwP844HmCoyJWsJkRZWQA0BWwQJtafvnZrqhZC4HAXs0UqXnST2sdvGJr/Xoydj58Ln9VKO6Qq9DIDIIQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vojta\\RiderProjects\\DiaryApp\\DiaryApp\\DiaryApp.csproj",
+  "projectFilePath": "C:\\Users\\baudyvo20\\DiaryApp\\DiaryApp\\DiaryApp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\vojta\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+    "C:\\Users\\baudyvo20\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
   ],
   "logs": []
 }
