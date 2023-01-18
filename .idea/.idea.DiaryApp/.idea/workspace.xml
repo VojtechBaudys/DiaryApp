@@ -9,16 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a61f169f-f525-4979-b687-94fe8b53e7c5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DiaryApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiaryApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiaryApp/Diary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/Diary.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiaryApp/MenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/MenuController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiaryApp/Task.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/Task.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiaryApp/obj/DiaryApp.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/obj/DiaryApp.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiaryApp/obj/DiaryApp.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/obj/DiaryApp.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiaryApp/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiaryApp/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiaryApp/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiaryApp/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiaryApp/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiaryApp/tasks.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +17,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/DiaryApp/Diary.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DiaryApp/MenuController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DiaryApp/Task.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DiaryApp/tasks.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -115,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673999511525</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="last čau">
+      <created>1674053864550</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674053864550</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +143,8 @@
     <MESSAGE value="feature/lambáda add, show" />
     <MESSAGE value="feature/Taskos" />
     <MESSAGE value="feature/showAll" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature/showAll" />
+    <MESSAGE value="last čau" />
+    <option name="LAST_COMMIT_MESSAGE" value="last čau" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
